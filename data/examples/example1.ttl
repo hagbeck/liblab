@@ -1,0 +1,76 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF Site Summary (RSS) 1.0
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . # RDF Schema vocabulary (RDFS)
+@prefix owl: <http://www.w3.org/2002/07/owl#> . # Web Ontology Language (OWL)
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ecrm: <http://erlangen-crm.org/120111/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/120219/> .
+@prefix frbr: <http://rdvocab.info/uri/schema/FRBRentitiesRDA/> .
+@prefix rdaGr1: <http://RDVocab.info/Elements/> .
+@prefix rdaRole: <http://RDVocab.info/roles/> .
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix marcLang: <http://marccodes.heroku.com/languages/> .
+@prefix lobid: <http://lobid.org/resource/> .
+
+@prefix f14: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F14/> .
+@prefix f19: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F19/> .
+@prefix f28: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F28/> .
+@prefix f30: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F30/> .
+@prefix f22: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F22/> .
+@prefix f24: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F24/> .
+@prefix f11: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F11/> .
+@prefix f3:  <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F3/> .
+@prefix f32: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F32/> .
+
+# Individual Work:
+<f14:HT015671602> a efrbroo:F14_Individual_Work ;
+  efrbroo:R19i_was_realised_through <f28:HT015671602> ;
+  rdaRole:authorWork <gnd:142840386> .
+
+# Publication Work:
+<f19:HT015671602> a efrbroo:F19_Publication_Work ;
+  efrbroo:R23i_was_realised_through <f30:HT015671602> ;
+  rdaGr1:preferredTitleForTheWork "FRBR : a guide for the perplexed" .
+
+# Expression Creation:
+<f28:HT015671602> a efrbroo:F28_Expression_Creation ;
+  ecrm:P14_carried_out_by <gnd:142840386> ;
+  efrbroo:R17_created <f22:HT015671602> ;
+  efrbroo:R19_created_a_realisation_of <f14:HT015671602> .
+
+# Publication Event:
+<f30:HT015671602> a efrbroo:F30_Publication_Event ;
+  ecrm:P14_carried_out_by <f11:HT015671602-1> ;
+  dc:date 2008 ;
+  dc:place "Chicago" ;
+  efrbroo:R23_created_a_realisation_of <f19:HT015671602> ;
+  efrbroo:R24_created <f24:HT015671602> .
+
+# Self-Contained Expression:
+<f22:HT015671602> a efrbroo:F22_Self-Contained_Expression ;
+  efrbroo:R14i_is_incorporated_in <f24:HT015671602> ;
+  efrbroo:R17i_was_created_by <f28:HT015671602> ;
+  efrbroo:R4_carriers_provided_by <f3:HT015671602> ;
+  rdaGr1:languageOfTheContentExpression <marcLang:eng> .
+
+# Publication Expression:
+<f24:HT015671602> a efrbroo:F24_Publication_Expression ;  
+  efrbroo:CLR6i_should_be_carried_by <f3:HT015671602> ;
+  efrbroo:R14_incorporates <f22:HT015671602> ;
+  efrbroo:R24i_was_created_through <f30:HT015671602> ;
+  efrbroo:R27i_was_used_by <f32:HT015671602> .
+
+# Manifestation:
+<f3:HT015671602> a efrbroo:F3_Manifestation_Product_Type, frbr:Manifestation ;
+  efrbroo:CLR6_should_carry <f24:HT015671602> ;
+  efrbroo:R26i_was_produced_by <f32:HT015671602> ;
+  efrbroo:R4i_comprises_carriers_of <f22:HT015671602> ;
+  owl:sameAs <lobid:HT015671602> ;
+  rdaGr1:dateOfPublicationManifestation 2008 ;
+  rdaGr1:identifierForTheManifestation "[ISBN] 0-8389-0950-7" ;
+  rdaGr1:identifierForTheManifestation "[ISBN] 978-0-8389-0950-8" ;
+  rdaGr1:placeOfPublicationManifestation "Chicago" ;
+  rdaGr1:placeOfPublicationManifestation "XD-US" ;
+  rdaGr1:publicationStatementManifestation "Chicago : American Library Association, 2008" ;
+  rdaGr1:publishersNameManifestation "American Library Association" ;
+  rdaRole:publisherManifestation <f11:HT015671602-1> .

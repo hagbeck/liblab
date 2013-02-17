@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF Site Summary (RSS) 1.0
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . # RDF Schema vocabulary (RDFS)
+@prefix owl: <http://www.w3.org/2002/07/owl#> . # Web Ontology Language (OWL)
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ecrm: <http://erlangen-crm.org/120111/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/120219/> .
+@prefix frbr: <http://rdvocab.info/uri/schema/FRBRentitiesRDA/> .
+@prefix rdaGr1: <http://RDVocab.info/Elements/> .
+@prefix rdaRole: <http://RDVocab.info/roles/> .
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix marcLang: <http://marccodes.heroku.com/languages/> .
+@prefix lobid: <http://lobid.org/resource/> .
+
+@prefix f18: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F18/> .
+@prefix f19: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F19/> .
+@prefix f30: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F30/> .
+
+# Serial Work:
+<f18:HT016530358> a efrbroo:F18_Serial_Work ;
+  efrbroo:R10_has_member <f19:HT016530358> ;
+  rdaGr1:preferredTitleForTheWork "Bibliothekspraxis" .
+
+# Publication Work:
+<f19:HT016530358> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f18:HT016530358> ;
+  efrbroo:R23i_was_realised_through <f30:HT016530358> ;
+  rdaGr1:preferredTitleForTheWork "Handbuch Bibliothek 2.0" .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF Site Summary (RSS) 1.0
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . # RDF Schema vocabulary (RDFS)
+@prefix owl: <http://www.w3.org/2002/07/owl#> . # Web Ontology Language (OWL)
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ecrm: <http://erlangen-crm.org/120111/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/120219/> .
+@prefix frbr: <http://rdvocab.info/uri/schema/FRBRentitiesRDA/> .
+@prefix rdaGr1: <http://RDVocab.info/Elements/> .
+@prefix rdaRole: <http://RDVocab.info/roles/> .
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix marcLang: <http://marccodes.heroku.com/languages/> .
+@prefix lobid: <http://lobid.org/resource/> .
+
+@prefix f18: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F18/> .
+@prefix f15: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F15/> .
+@prefix f19_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F19-F17/> .
+@prefix f30_f15: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F30-F15/> .
+@prefix f24_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F24-F17/> .
+@prefix f23_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F24-F17/> .
+@prefix f3_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F3-F17/> .
+
+# Serial Work (Zeitschrift):
+<f18:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F18_Serial_Work ;
+  efrbroo:R10_has_member <f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;     
+  rdaGr1:preferredTitleForTheWork "Kωκαλoς : studi pubblicati dall’Istituto di storia antica dell’Università di Palermo" ;
+  rdaGr1:abbreviatedTitle "Kokalos" .
+
+# Complex Work (Jahrgang, Volume):
+<f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F15_Complex_Work ;
+  efrbroo:R10i_is_member_of <f18:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;     
+  efrbroo:R10_has_member <f19_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;     
+  efrbroo:R23i_was_realised_through <f30_f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;      
+  rdaGr1:otherTitleInformation "Kωκαλoς : studi pubblicati dall’Istituto di storia antica dell’Università di Palermo / 45" .
+
+# Publication Work (Heft): 
+<f19_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;
+  efrbroo:R23i_was_realised_through <f30_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;
+  rdaGr1:otherTitleInformation "Kωκαλoς : studi pubblicati dall’Istituto di storia antica dell’Università di Palermo / 45 / ?" .
+
+# Manifestation Product Type (Manifestation des Heftes):
+<f3_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F3_Manifestation_Product_Type, frbr:Manifestation ;
+  efrbroo:CLR6_should_carry <f24_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;  
+  efrbroo:R4i_comprises_carriers_of <f23_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;  
+  rdaGr1:identifierForTheManifestation "[ISSN] 0454-1596" ;
+  rdaGr1:identifierForTheManifestation "[ISSN] 0392-0887" .

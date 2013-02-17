@@ -1,0 +1,67 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF Site Summary (RSS) 1.0
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . # RDF Schema vocabulary (RDFS)
+@prefix owl: <http://www.w3.org/2002/07/owl#> . # Web Ontology Language (OWL)
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ecrm: <http://erlangen-crm.org/120111/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/120219/> .
+@prefix frbr: <http://rdvocab.info/uri/schema/FRBRentitiesRDA/> .
+@prefix rdaGr1: <http://RDVocab.info/Elements/> .
+@prefix rdaRole: <http://RDVocab.info/roles/> .
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix marcLang: <http://marccodes.heroku.com/languages/> .
+@prefix lobid: <http://lobid.org/resource/> .
+
+@prefix f15_f14: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F15-F14/> .
+@prefix f14: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F14/> .
+@prefix f15_f19: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F15-F19/> .
+@prefix f19: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F19/> .
+@prefix f28: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F28/> .
+@prefix f30: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F30/> .
+
+# Complex Works:
+<f15_f14:HT001321758> a efrbroo:F15_Complex_Work ;
+  efrbroo:R10_has_member <f14:HT015417495> ;
+  efrbroo:R10_has_member <f14:HT015618061> ;
+  efrbroo:R10_has_member <f14:HT015770825> .
+  
+<f15_f19:HT001321758> a efrbroo:F15_Complex_Work ;
+  efrbroo:R10_has_member <f19:HT015417495> ;
+  efrbroo:R10_has_member <f19:HT015618061> ;
+  efrbroo:R10_has_member <f19:HT015770825> ;
+  rdaGr1:titleOfTheWork "Analysis" .
+  
+# Individual Works:
+<f14:HT015417495> a efrbroo:F14_Individual_Work ;
+  efrbroo:R10i_is_member_of <f15_f14:HT001321758> ;
+  efrbroo:R19i_was_realised_through <f28:HT015417495> ;
+  rdaRole:authorWork <gnd:115448942> .
+
+<f14:HT015618061> a efrbroo:F14_Individual_Work ;  
+  efrbroo:R10i_is_member_of <f15_f14:HT001321758> ;
+  efrbroo:R19i_was_realised_through <f28:HT015618061> ;
+  rdaRole:authorWork <gnd:115448942> .
+
+<f14:HT015770825> a efrbroo:F14_Individual_Work ;
+  efrbroo:R10i_is_member_of <f15_f14:HT001321758> ;
+  efrbroo:R19i_was_realised_through <f28:HT015770825> ;
+  rdaRole:authorWork <gnd:115448942> .
+
+# Publication Works:
+<f19:HT015417495> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15_f19:HT001321758> ;
+  efrbroo:R23i_was_realised_through <f30:HT015417495> ;
+  rdaGr1:otherTitleInformation "Analysis / 1" ;
+  rdaGr1:titleOfTheWork "Differential- und Integralrechnung einer Veränderlichen" .
+
+<f19:HT015618061> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15_f19:HT001321758> ;
+  efrbroo:R23i_was_realised_through <f30:HT015618061> ;
+  rdaGr1:otherTitleInformation "Analysis / 2" ;
+  rdaGr1:titleOfTheWork "Differentialrechnung im R n, gewöhnliche Differentialgleichungen" .
+
+<f19:HT015770825> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15_f19:HT001321758> ;
+  efrbroo:R23i_was_realised_through <f30:HT015770825> ;
+  rdaGr1:otherTitleInformation "Analysis / 3" ;
+  rdaGr1:titleOfTheWork "Integralrechnung im R n mit Anwendungen" .

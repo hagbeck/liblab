@@ -1,0 +1,72 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF Site Summary (RSS) 1.0
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . # RDF Schema vocabulary (RDFS)
+@prefix owl: <http://www.w3.org/2002/07/owl#> . # Web Ontology Language (OWL)
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ecrm: <http://erlangen-crm.org/120111/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/120219/> .
+@prefix frbr: <http://rdvocab.info/uri/schema/FRBRentitiesRDA/> .
+@prefix rdaGr1: <http://RDVocab.info/Elements/> .
+@prefix rdaRole: <http://RDVocab.info/roles/> .
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix marcLang: <http://marccodes.heroku.com/languages/> .
+@prefix lobid: <http://lobid.org/resource/> .
+
+@prefix f14: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F14/> .
+@prefix f28_f14: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F28/> .
+@prefix f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F17/> .
+@prefix f28_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F17/> .
+@prefix f19_f14: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F19-F14/> .
+@prefix f30_f14: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F30-F14/> .
+@prefix f19_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F19-F17/> .
+@prefix f30_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F30-F17/> .
+@prefix f22_f14: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F22-F14/> .
+@prefix f24_f14: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F24-F14/> .
+@prefix f22_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F24-F17/> .
+@prefix f24_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F24-F17/> .
+@prefix f3_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F3-F17/> .
+
+# Individual Work des Beitrags:
+<f14:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F14_Individual_Work ;  
+  efrbroo:R19i_was_realised_through <f28_f14:48473e07-60aa-4858-9a96-133dab42f6f6> .
+
+# Aggregation Work des Sammelwerks:
+<f17:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F17_Aggregation_Work ;
+  efrbroo:R19i_was_realised_through <f28_f17:48473e07-60aa-4858-9a96-133dab42f6f6> .
+
+# Publication Work des Beitrags:
+<f19_f14:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F19_Publication_Work ;
+  efrbroo:R23i_was_realised_through <f30_f14:48473e07-60aa-4858-9a96-133dab42f6f6> ;    
+  rdaGr1:preferredTitleForTheWork "Commercial Interchanges Between Greeks and Natives" .
+
+# Publication Work des Sammelwerks:
+<f19_f17:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F19_Publication_Work ;
+  efrbroo:R23i_was_realised_through <f30_f17:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  rdaGr1:preferredTitleForTheWork "Collected papers on Greek colonization" .
+
+# Self-contained Expression des Beitrags:
+<f22_f14:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F22_Self-Contained_Expression, efrbroo:F23_Expression_Fragment ;
+  efrbroo:R17i_was_created_by <f28_f14:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R14i_is_incorporated_in <f24_f14:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R15i_is_fragment_of <f22_f17:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  rdaGr1:languageOfTheContentExpression <marcLang:eng> .
+
+# Publication Expression des Beitrags:
+<f24_f14:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F24_Publication_Expression, efrbroo:F23_Expression_Fragment ;
+  efrbroo:R24i_was_created_through <f30_f14:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R14_incorporates <f22_f14:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R15i_is_fragment_of <f24_f17:48473e07-60aa-4858-9a96-133dab42f6f6> .
+
+# Self-contained Expression des Sammelwerks:
+<f22_f17:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F22_Self-Contained_Expression ; 
+  efrbroo:R14i_is_incorporated_in <f24_f17:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R17i_was_created_by <f28_f17:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R15_has_fragment <f22_f14:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R4_carriers_provided_by <f3_f17:48473e07-60aa-4858-9a96-133dab42f6f6> ;     
+  rdaGr1:languageOfTheContentExpression <marcLang:eng> .
+
+# Publication Expression des Sammelwerks:
+<f24_f17:48473e07-60aa-4858-9a96-133dab42f6f6> a efrbroo:F24_Publication_Expression ;
+  efrbroo:R24i_was_created_through <f30_f17:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R14_incorporates <f22_f17:48473e07-60aa-4858-9a96-133dab42f6f6> ;
+  efrbroo:R15_has_fragment <f24_f14:48473e07-60aa-4858-9a96-133dab42f6f6> .

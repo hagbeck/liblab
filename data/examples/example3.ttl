@@ -1,0 +1,123 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . # RDF Site Summary (RSS) 1.0
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . # RDF Schema vocabulary (RDFS)
+@prefix owl: <http://www.w3.org/2002/07/owl#> . # Web Ontology Language (OWL)
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ecrm: <http://erlangen-crm.org/120111/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/120219/> .
+@prefix frbr: <http://rdvocab.info/uri/schema/FRBRentitiesRDA/> .
+@prefix rdaGr1: <http://RDVocab.info/Elements/> .
+@prefix rdaRole: <http://RDVocab.info/roles/> .
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix marcLang: <http://marccodes.heroku.com/languages/> .
+@prefix lobid: <http://lobid.org/resource/> .
+
+@prefix f17: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F17/> .
+@prefix f15: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F15/> .
+@prefix f19: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F19/> .
+@prefix f28: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F28/> .
+@prefix f30: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F30/> .
+@prefix f22: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F22/> .
+@prefix f23: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F23/> .
+@prefix f24: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F24/> .
+@prefix f10: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F10/> .
+@prefix f11: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F11/> .
+@prefix f3: <http://data.ub.tu-dortmund.de/resource/ubdo/frbroo/F3/> .
+
+# Aggregation Work:
+<f17:HT003592036> a efrbroo:F17_Aggregation_Work ;
+  efrbroo:R19i_was_realised_through <f28:HT003592036> .
+
+# Complex Work:
+<f15:HT003592036> a efrbroo:F15_Complex_Work ;
+  efrbroo:R10_has_member <f19:HT003592026> ;
+  efrbroo:R10_has_member <f19:HT003592033> ;
+  efrbroo:R23i_was_realised_through <f30:HT003592036> ;
+  rdaGr1:titleOfTheWork "Grundlagen der praktischen Information und Dokumentation : ein Handbuch zur Einführung in die fachliche Informationsarbeit" .
+
+# Publication Works:
+<f19:HT003592033> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15:HT003592036> ;
+  efrbroo:R23i_was_realised_through <f30:HT003592033> ;
+  rdaGr1:otherTitleInformation "Grundlagen der praktischen Information und Dokumentation : ein Handbuch zur Einführung in die fachliche Informationsarbeit / 1" .
+
+<f19:HT003592026> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15:HT003592036> ;
+  efrbroo:R23i_was_realised_through <f30:HT003592026> ;
+  rdaGr1:otherTitleInformation "Grundlagen der praktischen Information und Dokumentation : ein Handbuch zur Einführung in die fachliche Informationsarbeit / 2" .
+
+# Expression Creation:
+<f28:HT003592036> a efrbroo:F28_Expression_Creation ;
+ ecrm:P14_carried_out_by <gnd:105708305> ;
+ ecrm:P14_carried_out_by <f10:HT003592036-1> ;
+ efrbroo:R17_created <f22:HT003592036> ;
+ efrbroo:R19_created_a_realisation_of <f17:HT003592036> .
+
+# Publication Events:
+<f30:HT003592036> a efrbroo:F30_Publication_Event ; 
+  dc:date 1990 ;
+  dc:place "München [u.a.]" ;
+  ecrm:P14F_carried_out_by <f11:HT003592033-1> ;
+  ecrm:P14F_carried_out_by <f11:HT003592026-1> ;
+  efrbroo:R23_created_a_realisation_of <f15:HT003592036> ;
+  ecrm:P9_consists_of <f30:HT003592033> ;
+  ecrm:P9_consists_of <f30:HT003592026> ;
+  efrbroo:R24_created <f24:HT003592036> .
+
+<f30:HT003592033> a efrbroo:F30_Publication_Event ;
+  dc:date 1990 ;
+  dc:place "München [u.a.]" ;
+  ecrm:P14F_carried_out_by <f11:HT003592033-1> ;
+  efrbroo:R23_created_a_realisation_of <f19:HT003592033> ;
+  efrbroo:R24_created <f24:HT003592033> ;
+  ecrm:P9i_forms_part_of <f30:HT003592036> .
+
+<f30:HT003592026> a efrbroo:F30_Publication_Event ;
+  dc:date 1990 ;
+  dc:place "München [u.a.]" ;
+  ecrm:P14F_carried_out_by <f11:HT003592026-1> ;
+  efrbroo:R23_created_a_realisation_of <f19:HT003592026> ;
+  efrbroo:R24_created <f24:HT003592026> ;
+  ecrm:P9i_forms_part_of <f30:HT003592036> .
+
+# Self-contained Expression:
+<f22:HT003592036> a efrbroo:F22_Self-Contained_Expression ;
+  efrbroo:R14i_is_incorporated_in <f24:HT003592036> ;
+  efrbroo:R15_has_fragment <f23:HT003592026> ;
+  efrbroo:R15_has_fragment <f23:HT003592033> ;
+  efrbroo:R17i_was_created_by <f28:HT003592036> ;
+  rdaGr1:languageOfTheContentExpression <marcLang:ger> ;
+  rdaRole:editor <gnd:105708305> ;
+  rdaRole:editor <f10:HT003592036-1> .
+
+# Expression Fragments:
+<f23:HT003592033> a efrbroo:F23_Expression_Fragment ;
+  efrbroo:R14i_is_incorporated_in <f24:HT003592033> ;
+  efrbroo:R15i_is_fragment_of <f22:HT003592036> ;
+  efrbroo:R4_carriers_provided_by <f3:HT003592033> ;
+  rdaGr1:languageOfTheContentExpression <marcLang:ger> .
+
+<f23:HT003592026> a efrbroo:F23_Expression_Fragment ;
+  efrbroo:R14i_is_incorporated_in <f24:HT003592026> ;
+  efrbroo:R15i_is_fragment_of <f22:HT003592036> ;
+  efrbroo:R4_carriers_provided_by <f3:HT003592026> ;
+  rdaGr1:languageOfTheContentExpression <marcLang:ger> .
+
+# Publication Expressions:
+<f24:HT003592036> a efrbroo:F24_Publication_Expression ;
+  efrbroo:R14_incorporates <f22:HT003592036> ;
+  efrbroo:R24i_was_created_through <f30:HT003592036> ;
+  efrbroo:R5_has_component <f24:HT003592033> ;
+  efrbroo:R5_has_component <f24:HT003592026> .
+
+<f24:HT003592033> a efrbroo:F24_Publication_Expression ;
+  efrbroo:CLR6i_should_be_carried_by <f3:HT003592033> ;
+  efrbroo:R14_incorporates <f23:HT003592033> ;
+  efrbroo:R24i_was_created_through <f30:HT003592033> ;
+  efrbroo:R5i_is_component_of <f24:HT003592036> .
+
+<f24:HT003592026> a efrbroo:F24_Publication_Expression ;
+  efrbroo:CLR6i_should_be_carried_by <f3:HT003592026> ;
+  efrbroo:R14_incorporates <f23:HT003592026> ;
+  efrbroo:R24i_was_created_through <f30:HT003592026> ;
+  efrbroo:R5i_is_component_of <f24:HT003592036> .

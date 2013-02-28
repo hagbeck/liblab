@@ -12,36 +12,106 @@
 @prefix marcLang: <http://marccodes.heroku.com/languages/> .
 @prefix lobid: <http://lobid.org/resource/> .
 
-@prefix f18: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F18/> .
-@prefix f15: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F15/> .
-@prefix f19_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F19-F17/> .
-@prefix f30_f15: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F30-F15/> .
-@prefix f24_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F24-F17/> .
-@prefix f23_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F24-F17/> .
-@prefix f3_f17: <http://data.archeoinf.tu-dortmund.de/resource/gela/frbroo/F3-F17/> .
+@prefix e13: <http://data.ub.tu-dortmund.de/resource/example/ecrm/E13/> .
+@prefix e35: <http://data.ub.tu-dortmund.de/resource/example/ecrm/E35/> .
+
+@prefix f18: <http://data.ub.tu-dortmund.de/resource/example/frbroo/F18/> .
+@prefix f15: <http://data.ub.tu-dortmund.de/resource/example/frbroo/F15/> .
+@prefix f19_f17: <http://data.ub.tu-dortmund.de/resource/example/frbroo/F19-F17/> .
+@prefix f30_f15: <http://data.ub.tu-dortmund.de/resource/example/frbroo/F30-F15/> .
+@prefix f24_f17: <http://data.ub.tu-dortmund.de/resource/example/frbroo/F24-F17/> .
+@prefix f23_f17: <http://data.ub.tu-dortmund.de/resource/example/frbroo/F24-F17/> .
+@prefix f3_f17: <http://data.ub.tu-dortmund.de/resource/example/frbroo/F3-F17/> .
 
 # Serial Work (Zeitschrift):
-<f18:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F18_Serial_Work ;
-  efrbroo:R10_has_member <f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;     
-  rdaGr1:preferredTitleForTheWork "Kωκαλoς : studi pubblicati dall’Istituto di storia antica dell’Università di Palermo" ;
-  rdaGr1:abbreviatedTitle "Kokalos" .
+<f18:3d50fa7250121b8ac1900abacb9f6feb> a efrbroo:F18_Serial_Work ;
+  efrbroo:R10_has_member <f15:3d50fa7250121b8ac1900abacb9f6feb-1950> ;   
+  ecrm:P140i_was_attributed_by <e13:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  ecrm:P140i_was_attributed_by <e13:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  ecrm:p102_has_title <e35:3d50fa7250121b8ac1900abacb9f6feb-1997-5> .
+  
+<e13:3d50fa7250121b8ac1900abacb9f6feb-1950-1> a ecrm:E13_Attribute_Assignment ;
+  ecrm:P140_assigned_attribute_to <f18:3d50fa7250121b8ac1900abacb9f6feb> ;
+  ecrm:P141_assigned <e35:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  dc:date 1950 ;
+  ecrm:P9i_forms_part_of <f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  ecrm:P120_occurs_before <e13:3d50fa7250121b8ac1900abacb9f6feb-1997-5> .
+  
+<e35:3d50fa7250121b8ac1900abacb9f6feb-1950-1> a ecrm:E35_Title ;
+  ecrm:P141i_was_assigned_by <e13:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  ecrm:P102i_is_title_of <f18:3d50fa7250121b8ac1900abacb9f6feb> ;
+  rdf:Literal "Nachrichten für Dokumentation" .
+
+<e13:3d50fa7250121b8ac1900abacb9f6feb-1997-5> a ecrm:E13_Attribute_Assignment ;
+  ecrm:P140_assigned_attribute_to <f18:3d50fa7250121b8ac1900abacb9f6feb> ;
+  ecrm:P141_assigned <e35:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  dc:date 1997 ;
+  ecrm:P9i_forms_part_of <f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  ecrm:120i_occurs_after <e13:3d50fa7250121b8ac1900abacb9f6feb-1950-1> .
+  
+<e35:3d50fa7250121b8ac1900abacb9f6feb-1997-5> a ecrm:E35_Title ;
+  ecrm:P141i_was_assigned_by <e13:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  ecrm:P102i_is_title_of <f18:3d50fa7250121b8ac1900abacb9f6feb> ;
+  rdf:Literal "Nfd : Information - Wissenschaft und Praxis" .
 
 # Complex Work (Jahrgang, Volume):
-<f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F15_Complex_Work ;
-  efrbroo:R10i_is_member_of <f18:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;     
-  efrbroo:R10_has_member <f19_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;     
-  efrbroo:R23i_was_realised_through <f30_f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;      
-  rdaGr1:otherTitleInformation "Kωκαλoς : studi pubblicati dall’Istituto di storia antica dell’Università di Palermo / 45" .
+<f15:3d50fa7250121b8ac1900abacb9f6feb-1950> a efrbroo:F15_Complex_Work ;
+  efrbroo:R10i_is_member_of <f18:3d50fa7250121b8ac1900abacb9f6feb> ;     
+  efrbroo:R10_has_member <f19_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;     
+  efrbroo:R23i_was_realised_through <f30_f15:3d50fa7250121b8ac1900abacb9f6feb-1950> ;      
+  rdaGr1:otherTitleInformation "1.1950" .
+
+<f15:3d50fa7250121b8ac1900abacb9f6feb-1997> a efrbroo:F15_Complex_Work ;
+  efrbroo:R10i_is_member_of <f18:3d50fa7250121b8ac1900abacb9f6feb> ;     
+  efrbroo:R10_has_member <f19_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;     
+  efrbroo:R23i_was_realised_through <f30_f15:3d50fa7250121b8ac1900abacb9f6feb-1997> ;      
+  rdaGr1:otherTitleInformation "48.1997" .
 
 # Publication Work (Heft): 
-<f19_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F19_Publication_Work ;
-  efrbroo:R10i_is_member_of <f15:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;
-  efrbroo:R23i_was_realised_through <f30_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;
-  rdaGr1:otherTitleInformation "Kωκαλoς : studi pubblicati dall’Istituto di storia antica dell’Università di Palermo / 45 / ?" .
+<f19_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15:3d50fa7250121b8ac1900abacb9f6feb-1950> ;
+  efrbroo:R23i_was_realised_through <f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  rdaGr1:otherTitleInformation "Nachrichten für Dokumentation. 1.1950,1" .
+  
+<f19_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> a efrbroo:F19_Publication_Work ;
+  efrbroo:R10i_is_member_of <f15:3d50fa7250121b8ac1900abacb9f6feb-1997> ;
+  efrbroo:R23i_was_realised_through <f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  rdaGr1:otherTitleInformation "Nfd : Information - Wissenschaft und Praxis. 48.1997,5" .
+  
+# Publication Event (Heft): 
+<f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> a efrbroo:F30_Publication_Event ;
+  efrbroo:R23_created_a_realisation_of <f19_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  ecrm:P14_carried_out_by <gnd:7238-2> ;
+  dc:date 1950 ;
+  dc:place "Frankfurt / Main" ;
+  efrbroo:R24_created <f24_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  ecrm:P9_consists_of <e13:3d50fa7250121b8ac1900abacb9f6feb-1950-1> .
+
+<f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> a efrbroo:F30_Publication_Event ;
+  efrbroo:R23_created_a_realisation_of <f19_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  ecrm:P14_carried_out_by "Heidelberger Verlags-Anstalt und Druck" ;
+  dc:date 1997 ;
+  dc:place "Heidelberg" ;
+  efrbroo:R24_created <f24_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  ecrm:P9_consists_of <e13:3d50fa7250121b8ac1900abacb9f6feb-1997-5> .
+
+# Publication Expression (Heft): 
+<f24_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> a  efrbroo:F24_Publication_Expression ;
+  efrbroo:R24i_was_created_through <f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;
+  efrbroo:CLR6i_should_be_carried_by <f3_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> .
+
+<f24_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> a  efrbroo:F24_Publication_Expression ;
+  efrbroo:R24i_was_created_through <f30_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;
+  efrbroo:CLR6i_should_be_carried_by <f3_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> .
 
 # Manifestation Product Type (Manifestation des Heftes):
-<f3_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> a efrbroo:F3_Manifestation_Product_Type, frbr:Manifestation ;
-  efrbroo:CLR6_should_carry <f24_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;  
-  efrbroo:R4i_comprises_carriers_of <f23_f17:d53bedeb-7b56-4f7e-9d1f-d869e7910184> ;  
-  rdaGr1:identifierForTheManifestation "[ISSN] 0454-1596" ;
-  rdaGr1:identifierForTheManifestation "[ISSN] 0392-0887" .
+<f3_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> a efrbroo:F3_Manifestation_Product_Type, frbr:Manifestation ;
+  efrbroo:CLR6_should_carry <f24_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;  
+  efrbroo:R4i_comprises_carriers_of <f23_f17:3d50fa7250121b8ac1900abacb9f6feb-1950-1> ;  
+  rdaGr1:identifierForTheManifestation "[ISSN] 0027-7436" .
+  
+<f3_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> a efrbroo:F3_Manifestation_Product_Type, frbr:Manifestation ;
+  efrbroo:CLR6_should_carry <f24_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;  
+  efrbroo:R4i_comprises_carriers_of <f23_f17:3d50fa7250121b8ac1900abacb9f6feb-1997-5> ;  
+  rdaGr1:identifierForTheManifestation "[ISSN] 1434-4653" .
+  
